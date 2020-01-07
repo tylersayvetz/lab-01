@@ -1,0 +1,32 @@
+* {
+    border: thin white solid;
+}
+body {
+    background-color: ivory;
+}
+
+header {
+    background-color: aquamarine;
+}
+
+div {
+    border-radius: 4px;
+}
+
+.left-panel {
+    background-color: rgb(160, 190, 255);
+}
+
+.main-wings {
+    background-color: khaki;
+
+}
+
+.supporting-content {
+    background-color: pink;
+
+}
+
+.footer {
+    background-color: lightcyan;
+}

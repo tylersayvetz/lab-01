@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Mobile First!
+    </title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="css/theme.css" />
+</head>
+
+<body>
+    <header id="a">
+        a
+    </header>
+    <div class="left-panel" id="b">b</div>
+    <div class="main-wings-container">
+        <div class="main-wings" id="c">c</div>
+        <div class="main-wings" id="d">d</div>
+    </div>
+    <div class="supporting-container">
+        <div class="supporting-content" id="e">e</div>
+        <div class="supporting-content" id="f">f</div>
+        <div class="supporting-content" id="g">g</div>
+        <div class="supporting-content" id="h">h</div>
+    </div>
+    <div class="footer" id="i">i</div>
+    </div>
+
+
+    <script>
+        const ids = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i'];
+        const elements = ids.map((id) => {
+            return document.getElementById(id);
+        });
+
+        const interval = 60;
+        const base = 767;
+        $(window).resize(function (event) {
+            const width = event.originalEvent.currentTarget.innerWidth;
+            console.log(width);
+            elements.forEach((element, idx) => { 
+    
+                if (width < base + interval * idx && width > base + interval * (idx - 1)) { 
+                    element.style.backgroundColor = "black";
+                } else {
+                    element.style.backgroundColor = ""; 
+                }
+            })
+
+
+        });
+        
+
+    </script>
+</body>
+
+</html>
