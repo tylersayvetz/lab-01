@@ -30,7 +30,7 @@ header {
     height: 80px;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
     body {
         max-width: 960px;
         margin: 0 auto;

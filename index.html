@@ -29,10 +29,8 @@
     </div>
     <div class="footer" id="i">i</div>
     </div>
-
-
     <script>
-        const ids = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i'];
+        const ids = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'];
         const elements = ids.map((id) => {
             return document.getElementById(id);
         });
@@ -42,19 +40,14 @@
         $(window).resize(function (event) {
             const width = event.originalEvent.currentTarget.innerWidth;
             console.log(width);
-            elements.forEach((element, idx) => { 
-    
-                if (width < base + interval * idx && width > base + interval * (idx - 1)) { 
+            elements.forEach((element, idx) => {
+                if (width < base + interval * idx && width > base + interval * (idx - 1)) {
                     element.style.backgroundColor = "black";
                 } else {
-                    element.style.backgroundColor = ""; 
+                    element.style.backgroundColor = "";
                 }
             })
-
-
         });
-        
-
     </script>
 </body>
 
